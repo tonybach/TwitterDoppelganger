@@ -4,6 +4,8 @@ If you use Twitter, then out of all the Twitter users that you follow (or "frien
 
 The algorithm code is done, but we are working on the web app version so you can actually try it out. In the meantime, check out our [poster](https://github.com/tonybach/TwitterDoppelganger/blob/master/poster.pdf)!
 
+Tech stack: Python, Django
+
 Team:
 - Tony Bach
 - [Gozong Lor](https://www.linkedin.com/in/gozonglor)
