@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Finding your Doppelganger</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+	<script>WebFont.load({google: {families: ["Varela:400"]}});</script>
+	<script type="text/javascript" src="{% static 'js/modernizr.js' %}"></script>
+	<script   src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+</head>
+<body class="container">
+	<div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav navbarsides">
+		<div class="w-container navbar">
+			<nav role="navigation" class="w-nav-menu">
+				<a href="#" class="w-nav-link navbarlink">About</a>
+				<a href="#" class="w-nav-link navbarlink">Contact</a>
+			</nav>
+			<div class="w-nav-button">
+				<div class="w-icon-nav-menu"></div>
+				</div>
+			</div>
+		</div>
+		<h1 class="title">Twitter Doppelganger</h1>
+		<div class="subtitle">Almost there! Now enter your email to receive the results</div>
+		<form action="submitEmail" method="post" style="text-align:center; margin-top:25px">
+			{% csrf_token %}
+			<input type="text" placeholder="email" name="email">
+			<input type="submit" value ="submit">
+		</form>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/webflow.js' %}"></script>
+<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
