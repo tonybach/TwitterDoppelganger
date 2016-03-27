@@ -29,6 +29,7 @@
 		<form action="submitEmail" method="post" style="text-align:center; margin-top:25px">
 			{% csrf_token %}
 			<input type="text" placeholder="email" name="email">
+			<input type="hidden" name="twitter_params" value={{request.get_full_path}}>
 			<input type="submit" value ="submit">
 		</form>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

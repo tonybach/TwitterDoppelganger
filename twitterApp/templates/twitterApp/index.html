@@ -27,10 +27,7 @@
 		<h1 class="title">Twitter Doppelganger</h1>
 		<div class="subtitle">Find your most similar Twitter friend!</div>
 		<div class="sign-in-button">
-			<form action="{% url 'twitterApp:signIn' %}" method="post">
-			{% csrf_token %}
-				<input type="image" src="{% static 'img/twitterButton.png' %}" alt="Submit" style="width: 166px">
-			</form>
+			<a href="{% url 'twitterApp:signIn' %}"><input type="image" src="{% static 'img/twitterButton.png' %}" alt="Submit" style="width: 166px"></a>
 		</div>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script type="text/javascript" src="{% static 'js/webflow.js' %}"></script>
