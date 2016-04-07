@@ -9,4 +9,4 @@ Tech stack: Python, Django
 Team:
 - Tony Bach
 - [Gozong Lor](https://www.linkedin.com/in/gozonglor)
-- [Yifan Going](https://www.linkedin.com/in/yifan-gong-b2b8ab86)
+- [Yifan Gong](https://www.linkedin.com/in/yifan-gong-b2b8ab86)
