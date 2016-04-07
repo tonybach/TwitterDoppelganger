@@ -18,9 +18,13 @@ def find_similarities(consumer_key, consumer_secret, access_token, access_token_
 	pp = pprint.PrettyPrinter(indent=2)
 
 	start = time.time()
-	tweet_dict, description_dict, location_dict = get_info_of_self_and_friends(screen_name)
+	if (tweet_dict == None):
+		# tweet_dict, description_dict, location_dict = get_info_of_self_and_friends(screen_name)
+		print('test')
 	end = time.time()
 	print(end-start)
+	print(tweet_dict, description_dict, location_dict)    
+
 
 def get_info_of_self_and_friends(my_user_name):
     tweet_dict = defaultdict(list)

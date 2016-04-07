@@ -7,8 +7,9 @@ import json
 import utils
 import calculations
 
-# def index(request):
-# 	return render(request, 'twitterApp/index.html', {})
+# tweet_dict = None
+# description_dict = None
+# location_dict = None
 
 class IndexView(TemplateView):
     template_name = "twitterApp/index.html"
@@ -31,6 +32,8 @@ def signIn(request):
 
 
 def submitEmail(request):
+	global tweet_dict, description_dict, location_dict
+
 	twitter_params = request.POST["twitter_params"]
 	oauth_token= twitter_params[twitter_params.find("oauth_token")+12:twitter_params.find("&oauth_verifier")]
 	oauth_verifier = twitter_params[twitter_params.find("oauth_verifier")+15:]
@@ -41,6 +44,7 @@ def submitEmail(request):
 	access_token_secret = r[r.find("&oauth_token_secret")+20:r.find("&user_id")]
 	user_id = r[r.find("&user_id")+9:r.find("&screen_name")]
 	screen_name = r[r.find("&screen_name")+13:r.find("&x_auth")]
+	print(r)
 
 	calculations.find_similarities(consumer_key, consumer_secret, access_token, access_token_secret, screen_name)
 	return HttpResponseRedirect(reverse('twitterApp:emailSubmitted'))
